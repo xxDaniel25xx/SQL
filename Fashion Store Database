@@ -1,1 +1,32 @@
+--Create a fashion store database
+
+CREATE TABLE Store ( Id INTEGER PRIMARY KEY, Name TEXT, Brand TEXT, Instock INTEGER, Price INTEGER);
+
+INSERT INTO Store VALUES (1, "Shirts" , "Jordan" , 250 , 29.99 );
+INSERT INTO Store VALUES (2, "Pants" , "Nike" , 350 , 49.99 );
+INSERT INTO Store VALUES (3, "Hats" , "Mlb" , 150 , 50 );
+INSERT INTO Store VALUES (4, "Belts" , "Hermes" , 100 , 55 );
+INSERT INTO Store VALUES (5, "Chains" , "CBLinks" , 50 , 60 );
+INSERT INTO Store Values (6, "Bracelets" , "CBLinks" , 50 , 65.99 );
+INSERT INTO Store VALUES (7, "Earrings" , "Cartier" , 100 , 67.99 );
+INSERT INTO Store VALUES (8, "Rings" , "GOLNDs" , 50 , 69.99 );
+INSERT INTO Store VALUES (9, "Glasses" , "Versace" , 100 , 74.99 );
+INSERT INTO Store VALUES (10, "Handbags" , "LouiVoutton" , 300 , 79.99 );
+INSERT INTO Store VALUES (11, "Watches" , "Rolex" , 100 , 99.99 );
+INSERT INTO Store VALUES (12, "Socks" , "Supreme" , 200 , 109.99 );
+INSERT INTO Store VALUES (13, "UnderwearM" , "Gucci" , 125, 124.99 );
+INSERT INTO Store VALUES (14, "UnderwearF" , "Gucci" , 125 , 124.99 );
+INSERT INTO Store VALUES (15, "Watches" , "RichardMillie" , 5 , 499.99 ); 
+
+--display the database ordered by price.
+SELECT * FROM Store ORDER BY price desc;
+
+--display the quantity of inventory in database.
+SELECT SUM(instock) FROM Store;
+
+--what item in the data base is less than 200? 
+SELECT * FROM Store WHERE price < 200 ORDER BY price;
+
+--what is the most economic and most expensive item in the database?
+SELECT * FROM Store WHERE Price ORDER  BY price;
 
